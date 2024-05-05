@@ -1,0 +1,79 @@
+@font-face {
+	font-family: sans;
+	src: url(../sans.woff2);
+}
+
+:root {
+	--cyan: #018281;
+	--blue: #00007C;
+	--grey: #C3C3C3;
+	--lrey: #7B7D7B;
+	--drey: #5A5A5A;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-family: sans;
+	box-sizing: border-box !important;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+.in, .out, .btn {
+	padding: 0.30em;
+	border: 2px solid;
+	background: var(--grey);
+}
+
+.out, .btn {
+	border-color: white var(--drey) var(--drey) white;
+}
+
+.in, .btn:active {
+	border-color: var(--drey) white white var(--drey);
+}
+
+.haf {
+	flex: 0 !important;
+	pointer-events: none;
+	border-top: 1px solid var(--drey);
+	border-bottom: 1px solid white;
+}
+
+.ful {
+	border: 1px solid white;
+	outline: 1px solid var(--drey) !important;
+}
+
+.dsh, .dsh2 {
+	text-align: center;
+	margin: 0.75em 0em;
+	padding: 0.50em 0em;
+	line-height: 1.25em;
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+}
+
+.dsh2 {
+	width: 30%;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: white;
+	background-image: linear-gradient(0deg, #ffffff 50%, #C3C3C3 50%);
+	background-size: 3px 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 2px solid;
+	background: var(--grey);
+	border-color: white var(--drey) var(--drey) white;
+}

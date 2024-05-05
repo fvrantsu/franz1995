@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Franz 1995</title>
+	<script src="script.js" defer></script>
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/module.css">
+	<link rel="shortcut icon" type="image/x-icon" href="icn/start.png?">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script><script>(function(){emailjs.init({publicKey:"JPf2fHUDwMbTJdVGh",})})()</script>
+</head>
+<body id="wrapper"> 
+
+<div id="top">
+
+	<div id="error" class="card out">
+		<div id="card-title">Alert</div>
+		<h5 id="card-body"> <img src="icn/false.png"> Mail incomplete, Try Again :( </h5>
+		<div id="card-foot">
+			<button class="btn" onclick="closeCard('error')">OK</button>
+		</div>
+	</div>
+
+	<div id="success" class="card out">
+		<div id="card-title">Alert</div>
+		<h5 id="card-body"> <img src="icn/true.png"> Mail submitted, Thank you :)  </h5>
+		<div id="card-foot">
+			<button class="btn" onclick="closeCard('success')">OK</button>
+		</div>
+	</div>
+
+	<div id="about" class="win out">
+		<div id="win-title">
+			<div id="title-left"> <img src="icn/about.png"> About</div>
+			<div id="title-right">
+				<button class="btn" id="min" onclick="ctrlWin('about', 'min')"><span></span></button>
+				<button class="btn" id="cls" onclick="ctrlWin('about', 'cls')">×</button>
+			</div>
+		</div>
+		<div id="win-body">
+			<div id="file-ctrl">
+				<h4><u>F</u>ile</h4><h4><u>E</u>dit</h4>
+				<h4><u>V</u>iew</h4><h4><u>H</u>elp</h4>
+			</div>
+			<div class="body-main in" id="about-main">
+				<h5 class="dsh">Franz 1995 README for Franz Mu&ntilde;oz<br>May 2024</h5>
+				<h5 id="cright">(c) Copyright Franz Mu&ntilde;oz, 2024</h5>
+				<h5 class="dsh2">ABOUT ME</h5>
+				<h5 id="mess">Hello world, I'm a 16 year old programmer based in the Philippines. I'm currently working on various Web, Game, and Android developments. Coding stuff is my passion, and seeing others happily benefit from it makes me want to do more.</h5>
+
+				<h5 id="mess">At 11, modding games was my passion. Witnessing how the game's behavior and values changed under my control sparked questions in my head about how it all worked behind the scenes. That's where I began searching for answers, and what I discovered amazed me, which made me dive into this deep ocean of new knowledge. After years of exploration, I have considered to turn my passion into a career.</h5>
+
+				<h5 id="mess">Franz 1995 is my first publicly released project. This site was also created to introduce myself and features a retro-style design, specifically inspired by Windows 95, because I appreciate its aesthetics. I also plan to showcase my other projects here in the future.</h5>
+
+				<h5 id="mess">Lastly, I'm deeply grateful for you taking the time to visit this site. I have learned a lot and had a great time creating it. If you have any suggestions or are interested in the projects I'll be posting in the near future, feel free to visit again.</h5>
+			</div>
+		</div>
+	</div>
+
+	<div id="mail" class="win out">
+		<div id="win-title">
+			<div id="title-left"> <img src="icn/mail.png"> Mail</div>
+			<div id="title-right">
+				<button class="btn" id="min" onclick="ctrlWin('mail', 'min')"><span></span></button>
+				<button class="btn" id="cls" onclick="ctrlWin('mail', 'cls')">×</button>
+			</div>
+		</div>
+		<div id="win-body">
+			<div id="mail-ctrl" class="ful">
+				<button class="btn" id="send"> <img src="icn/send.png"> Send</button>
+				<button class="btn" id="wipe"> <img src="icn/wipe.png"> Wipe</button>
+			</div>
+			<div class="body-main in" id="mail-main">
+				<h2 id="header">New Message</h2>
+				<h5>To: Franz Mu&ntilde;oz (fvrantsu@gmail.com)</h5>
+				<h5>Subject: <input id="subject"></h5>
+				<h5>From: <input id="from"></h5>
+				
+				<textarea id="message" placeholder="Type Message Here..."></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div id="photos" class="win out">
+		<div id="win-title">
+			<div id="title-left"> <img src="icn/photos.png"> Photos</div>
+			<div id="title-right">
+				<button class="btn" id="min" onclick="ctrlWin('photos', 'min')"><span></span></button>
+				<button class="btn" id="cls" onclick="ctrlWin('photos', 'cls')">×</button>
+			</div>
+		</div>
+		<div id="win-body">
+			<div id="file-ctrl">
+				<h4><u>F</u>ile</h4><h4><u>E</u>dit</h4>
+				<h4><u>V</u>iew</h4><h4><u>H</u>elp</h4>
+			</div>
+			<div class="body-main in" id="photos-main">
+				<button onclick="ctrlPic('dog1')"> <img src="icn/photo.png"> DOG1.JPG</button>
+				<button onclick="ctrlPic('dog2')"> <img src="icn/photo.png"> DOG2.JPG</button>
+				<button onclick="ctrlPic('dog3')"> <img src="icn/photo.png"> DOG3.JPG</button>
+				<button onclick="ctrlPic('dog4')"> <img src="icn/photo.png"> DOG4.JPG</button>
+				<button onclick="ctrlPic('loc1')"> <img src="icn/photo.png"> LOC1.JPG</button>
+				<button onclick="ctrlPic('loc2')"> <img src="icn/photo.png"> LOC2.JPG</button>
+				<button onclick="ctrlPic('loc3')"> <img src="icn/photo.png"> LOC3.JPG</button>
+				<button onclick="ctrlPic('loc4')"> <img src="icn/photo.png"> LOC4.JPG</button>
+			</div>
+			<div id="file-info">
+				<h4 class="in">4 Object(s)</h4><h4 class="in">1.28MB</h4>
+			</div>
+		</div>
+	</div>
+
+	<div id="player" class="win out">
+		<div id="win-title">
+			<div id="title-left"> <img src="icn/player.png"> Player</div>
+			<div id="title-right">
+				<button class="btn" id="min" onclick="ctrlWin('player', 'min')"><span></span></button>
+				<button class="btn" id="cls" onclick="ctrlWin('player', 'cls')">×</button>
+			</div>
+		</div>
+		<div id="win-body">
+			<div id="file-ctrl">
+				<h4><u>F</u>ile</h4><h4><u>E</u>dit</h4>
+				<h4><u>V</u>iew</h4><h4><u>H</u>elp</h4>
+			</div>
+			<div class="body-main in" id="player-main"></div>
+		</div>
+	</div>
+	
+	<div id="drawer">
+		<button onclick="ctrlWin('about', 'lch')"> <img src="icn/about.png"> About</button>
+		<button onclick="ctrlWin('mail', 'lch')"> <img src="icn/mail.png"> Mail</button>
+		<button onclick="ctrlWin('photos', 'lch')"> <img src="icn/photos.png"> Photos</button>
+	</div>
+
+</div>
+
+<div id="bot">
+
+	<div id="menu" class="out">
+		<div id="menu-left">
+			<div id="pane-fill"></div>
+			<img id="pane" src="icn/pane.png">
+		</div>
+		<div id="menu-right">
+			<a href="https://github.com/fvrantsu" target="_blank"> <img src="icn/link.png"> <u>G</u>ithub</a>
+			<a href="https://reddit.com/u/fvrantsu" target="_blank"> <img src="icn/link.png"> <u>R</u>eddit</a>
+			<a href="https://twitter.com/fvrantsu" target="_blank"> <img src="icn/link.png"> <u>T</u>witter</a>
+			<div class="haf"></div>
+			<a href="https://donchia.tech" target="_blank"> <img src="icn/reg.png"> <u>R</u>ef #1</a>
+			<a href="https://windows-95.webflow.io/" target="_blank"> <img src="icn/reg.png"> <u>R</u>ef #2</a>
+		</div>
+	</div>
+
+	<div id="taskbar">
+		<button id="tsk-menu" class="out" onclick="ctrlWin('menu', 'tgl')"> <img src="icn/start.png"> Start</button>
+		<div id="tasklist">
+			<button class="out" id="tsk-about" onclick="ctrlWin('about', 'sch')"> <img src="icn/about.png"> About</button>
+			<button class="out" id="tsk-mail" onclick="ctrlWin('mail', 'sch')"> <img src="icn/mail.png"> Mail</button>
+			<button class="out" id="tsk-photos" onclick="ctrlWin('photos', 'sch')"> <img src="icn/photos.png"> Photos</button>
+			<button class="out" id="tsk-player" onclick="ctrlWin('player', 'sch')"> <img src="icn/player.png"> Player</button>
+		</div>
+		<button class="in" id="clock">8:88 PM</button>
+	</div>
+
+</div>
+
+</body>
+</html>

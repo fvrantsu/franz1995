@@ -1,0 +1,9 @@
+@media (max-width: 1000px) {
+	.win {
+		width: 100%;
+		height: 70vh;
+	}
+	#tasklist {
+		display: flex;
+	}
+}

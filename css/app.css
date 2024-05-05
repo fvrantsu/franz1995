@@ -1,0 +1,224 @@
+.win {
+	width: 40vw;
+	height: 70vh;
+	display: none;
+	overflow: hidden;
+	position: absolute;
+	flex-direction: column;
+	padding: 0.10em !important;
+}
+
+#win-title {
+	cursor: grab;
+	color: white;
+	display: flex;
+	padding: 0.25em;
+	background: var(--blue);
+	justify-content: space-between;
+}
+
+#win-title div {
+	gap: 0.40em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#win-title img, #win-title button {
+	width: 20px;
+	height: 20px;
+}
+
+#win-title button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.10em !important;
+}
+
+#win-title span {
+	width: 8px;
+	height: 7px;
+}
+
+#title-right {
+	gap: 0.20em !important;
+}
+
+#min span {
+	border-bottom: 2px solid black;
+}
+
+#cls {
+	font-size: 1.25em;
+	letter-spacing: 0.05em;
+	font-family: arial !important;
+}
+
+#win-body {
+	flex: 1;
+	gap: 0.25em;
+	display: flex;
+	padding: 0.25em;
+	flex-direction: column;
+}
+
+.body-main {
+	flex: 1;
+	flex-basis: 0;
+	display: flex;
+	overflow: auto;
+	flex-direction: column;
+}
+
+#file-info *, #file-ctrl * {
+	font-weight: 400;
+}
+
+#file-ctrl {
+	gap: 0.45em !important;
+}
+
+#file-info {
+	display: flex;
+}
+
+#file-info > * {
+	flex: 1;
+}
+
+#about-main {
+	padding: 1em 2em;
+	background: white;
+}
+
+#cright {
+	margin: 1em 0em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+#mess {
+	margin: 1em 0em;
+}
+
+#photos-main {
+	gap: 2em;
+	padding: 2em;
+	display: flex;
+	flex-wrap: wrap;
+	background: white;
+}
+
+#photos-main button {
+	border: 0px;
+	gap: 0.50em;
+	display: flex;	
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	background: transparent;
+}
+
+#photos-main img {
+	width: 40px;
+	height: 40px;
+}
+
+#player-main {
+	background: url(../pic/dog1.jpg);
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+}
+
+#mail-ctrl, #file-ctrl {
+	gap: 0.25em;
+	margin: 1px;
+	display: flex;
+	padding: 0.25em;
+	flex-direction: row;
+}
+
+#mail-ctrl button {
+	gap: 0.35em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#mail-ctrl img {
+	width: 20px;
+	height: 20px;
+}
+
+#mail-main {
+	padding: 0.50em;
+	background: white;
+}
+
+#mail-main h5, #mail-main h2 {
+	margin: 0.30em 0em;
+	padding-bottom: 0.25em;
+	border-bottom: 1px solid var(--lrey);
+}
+
+#mail-main h5 {
+	gap: 0.40em;
+	display: flex;
+	align-items: center;
+}
+
+#mail-main input {
+	flex: 1;
+	border: 0px;
+}
+
+#message {
+	flex: 1;
+	padding: 1em;
+	resize: none;
+	background: var(--grey);
+	border: 1px solid var(--drey);
+}
+
+.card {
+	top: 50%; 
+    left: 50%; 
+    z-index: 100;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	padding: 0.10em !important;
+    transform: translate(-50%, -50%);
+}
+
+#card-title {
+	color: white;
+	padding: 0.25em;
+	background: var(--blue);
+}
+
+#card-body {
+	flex: 1;
+	gap: 1.50em;
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#card-body img {
+	width: 40px;
+	height: 40px;
+}
+
+#card-foot {
+	display: flex;
+	padding: 0.25em;
+	justify-content: end;
+}
+
+#card-foot button {
+	padding: 0.30em 2em;
+}
